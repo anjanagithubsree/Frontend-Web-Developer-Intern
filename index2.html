@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive webpage demonstrating flexible layouts, fluid images, and CSS media queries.">
+    <title>Responsive Design | Explore Nature</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="#home" aria-label="Explore Nature home">Explore<span>Nature</span></a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <a class="header-button" href="#destinations">Explore now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">DISCOVER SOMETHING NEW</p>
+                    <h1>Find your next <span>great escape.</span></h1>
+                    <p class="hero-description">
+                        From peaceful forests to breathtaking mountain views, discover places
+                        that help you slow down, explore, and reconnect with nature.
+                    </p>
+                    <a class="primary-button" href="#destinations">Explore destinations <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-image-wrap">
+                    <img
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85"
+                        alt="Mountain landscape reflected in a calm lake"
+                        class="hero-image">
+                    <div class="image-note"><span class="note-dot"></span> Take the scenic route</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations section-space" id="destinations">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+                        <h2>Places worth discovering</h2>
+                    </div>
+                    <p class="section-intro">A little inspiration for your next weekend away.</p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                             alt="Sunlight filtering through a green forest" loading="lazy">
+                        <div class="card-content">
+                            <p class="card-category">FOREST RETREAT</p>
+                            <h3>Into the green</h3>
+                            <p>Follow quiet trails and enjoy the calm of the forest.</p>
+                            <a href="#about" class="text-link">Discover more <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                             alt="Tall mountain peaks beneath a clear sky" loading="lazy">
+                        <div class="card-content">
+                            <p class="card-category">MOUNTAIN ESCAPE</p>
+                            <h3>Above the clouds</h3>
+                            <p>Take in dramatic peaks and refreshing mountain air.</p>
+                            <a href="#about" class="text-link">Discover more <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=900&q=80"
+                             alt="A peaceful river winding through a natural landscape" loading="lazy">
+                        <div class="card-content">
+                            <p class="card-category">WATERFRONT</p>
+                            <h3>Where rivers wander</h3>
+                            <p>Spend a slow afternoon beside clear, flowing water.</p>
+                            <a href="#about" class="text-link">Discover more <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-space" id="about">
+            <div class="container about-content">
+                <div>
+                    <p class="eyebrow">DESIGNED FOR EVERY SCREEN</p>
+                    <h2>Good design goes wherever you go.</h2>
+                </div>
+                <p>
+                    This demo uses semantic HTML, a flexible grid, fluid images, and CSS
+                    media queries. Resize your browser to see the layout adapt to desktop,
+                    tablet, and mobile screens.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Explore Nature</p>
+            <p>Built with HTML5 and responsive CSS.</p>
+        </div>
+    </footer>
+</body>
+</html>
