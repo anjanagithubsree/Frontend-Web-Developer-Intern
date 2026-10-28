@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloomSpace | Personal Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">✿</div>
+
+                <div>
+                    <h2>BloomSpace</h2>
+                    <p>Your personal planner</p>
+                </div>
+            </div>
+
+            <div class="workspace-label">
+                YOUR WORKSPACE
+            </div>
+
+            <nav class="navigation">
+
+                <a href="#overview" class="nav-link active">
+                    <span>⌂</span>
+                    Overview
+                </a>
+
+                <a href="#tasks" class="nav-link">
+                    <span>☷</span>
+                    My Tasks
+                </a>
+
+                <a href="#focus" class="nav-link">
+                    <span>◷</span>
+                    Focus Room
+                </a>
+
+            </nav>
+
+            <div class="sidebar-reminder">
+                <h3>🌷 A gentle reminder</h3>
+
+                <p>
+                    You don't have to do everything.
+                    Just the next thing.
+                </p>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-avatar">A</div>
+
+                <div>
+                    <h4>My Workspace</h4>
+                    <p>Personal Planner</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div>
+                    <p class="date-label" id="currentDate">
+                        YOUR DAY
+                    </p>
+
+                    <p class="topbar-message">
+                        Made for your everyday growth ❤️
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    class="theme-button"
+                    id="themeToggle"
+                    aria-label="Switch color theme"
+                >
+                    🌙
+                </button>
+
+            </header>
+
+            <!-- Overview Section -->
+            <section id="overview" class="welcome-section">
+
+                <div class="welcome-text">
+
+                    <p class="eyebrow">
+                        A LITTLE PROGRESS EVERY DAY
+                    </p>
+
+                    <h1>
+                        Your day,<br>
+                        your pace<span class="heading-dot">.</span>
+                    </h1>
+
+                    <p class="welcome-description">
+                        Make space for what matters.
+                        Your progress starts with one small step.
+                    </p>
+
+                </div>
+
+                <div class="welcome-illustration">
+                    <div class="sun-circle">☀</div>
+                    <div class="flower">🌷</div>
+                    <p>Grow at your own pace</p>
+                </div>
+
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon lavender">☷</div>
+
+                    <div>
+                        <p>Total tasks</p>
+                        <h2 id="totalTasks">0</h2>
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-icon peach">✓</div>
+
+                    <div>
+                        <p>Completed</p>
+                        <h2 id="completedTasks">0</h2>
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-icon green">✿</div>
+
+                    <div>
+                        <p>Remaining</p>
+                        <h2 id="remainingTasks">0</h2>
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- Progress Section -->
+            <section class="progress-card">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">YOUR DAILY JOURNEY</p>
+                        <h2>Today's progress</h2>
+                    </div>
+
+                    <span id="progressPercentage">0%</span>
+
+                </div>
+
+                <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="Daily task completion"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    id="progressBar"
+                >
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <p class="progress-message" id="progressMessage">
+                    Every little step counts.
+                </p>
+
+            </section>
+
+            <!-- Tasks Section -->
+            <section id="tasks" class="tasks-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">ONE STEP AT A TIME</p>
+                        <h2>My tasks</h2>
+                    </div>
+
+                    <span class="task-count" id="taskCount">
+                        0 tasks
+                    </span>
+
+                </div>
+
+                <!-- Add Task Form -->
+                <form id="taskForm" class="task-form">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What would you like to do?"
+                        aria-label="Enter a new task"
+                        maxlength="150"
+                        required
+                    >
+
+                    <button type="submit" class="add-button">
+                        + Add task
+                    </button>
+
+                </form>
+
+                <!-- Task Filters -->
+                <div class="filter-buttons">
+
+                    <button
+                        type="button"
+                        class="filter-button active"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-filter="active"
+                    >
+                        To do
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-filter="completed"
+                    >
+                        Completed
+                    </button>
+
+                </div>
+
+                <!-- Task List -->
+                <div id="taskList" class="task-list"></div>
+
+                <p id="emptyMessage" class="empty-message">
+                    🌱 Your task list is empty.
+                    Add a small goal to get started!
+                </p>
+
+            </section>
+
+            <!-- Focus Room -->
+            <section id="focus" class="focus-section">
+
+                <div class="focus-information">
+
+                    <p class="eyebrow">SLOW DOWN AND FOCUS</p>
+
+                    <h2>Your focus room</h2>
+
+                    <p>
+                        Give yourself a little time to concentrate
+                        on what matters most.
+                    </p>
+
+                    <div class="timer-options">
+
+                        <button
+                            type="button"
+                            class="duration-button active"
+                            data-minutes="15"
+                        >
+                            15 min
+                        </button>
+
+                        <button
+                            type="button"
+                            class="duration-button"
+                            data-minutes="25"
+                        >
+                            25 min
+                        </button>
+
+                        <button
+                            type="button"
+                            class="duration-button"
+                            data-minutes="45"
+                        >
+                            45 min
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="timer-card">
+
+                    <div class="timer-decoration">✿</div>
+
+                    <p class="timer-label">FOCUS TIME</p>
+
+                    <div
+                        id="timerDisplay"
+                        class="timer-display"
+                        role="timer"
+                        aria-live="off"
+                    >
+                        15:00
+                    </div>
+
+                    <p id="timerStatus" class="timer-status">
+                        Ready when you are
+                    </p>
+
+                    <div class="timer-buttons">
+
+                        <button
+                            type="button"
+                            id="startTimer"
+                            class="timer-start"
+                        >
+                            ▶ Start
+                        </button>
+
+                        <button
+                            type="button"
+                            id="resetTimer"
+                            class="timer-reset"
+                        >
+                            ↻ Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Motivational Quote -->
+            <section class="quote-card">
+
+                <div class="quote-icon">“</div>
+
+                <div>
+                    <p id="quoteText">
+                        Great things are done by a series
+                        of small things brought together.
+                    </p>
+
+                    <span id="quoteAuthor">
+                        — Vincent van Gogh
+                    </span>
+                </div>
+
+                <button
+                    type="button"
+                    id="newQuote"
+                    class="quote-button"
+                    aria-label="Show another motivational quote"
+                >
+                    ↻
+                </button>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                Made with care for your everyday growth ❤️
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script3.js"></script>
+
+</body>
+
+</html>
