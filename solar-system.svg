@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600"
+     height="520"
+     viewBox="0 0 600 520">
+
+    <defs>
+
+        <radialGradient id="space">
+            <stop offset="0%" stop-color="#24285e"/>
+            <stop offset="100%" stop-color="#090d20"/>
+        </radialGradient>
+
+        <radialGradient id="sun">
+            <stop offset="0%" stop-color="#fff3a5"/>
+            <stop offset="100%" stop-color="#ff9e40"/>
+        </radialGradient>
+
+        <radialGradient id="earth">
+            <stop offset="0%" stop-color="#69d8ec"/>
+            <stop offset="100%" stop-color="#2150a8"/>
+        </radialGradient>
+
+        <radialGradient id="mars">
+            <stop offset="0%" stop-color="#ffb08b"/>
+            <stop offset="100%" stop-color="#a83f38"/>
+        </radialGradient>
+
+    </defs>
+
+
+    <rect width="600"
+          height="520"
+          rx="30"
+          fill="url(#space)"/>
+
+
+    <!-- Stars -->
+
+    <g fill="#ffffff">
+
+        <circle cx="70" cy="65" r="2"/>
+        <circle cx="130" cy="130" r="2"/>
+        <circle cx="450" cy="65" r="2"/>
+        <circle cx="530" cy="150" r="2"/>
+        <circle cx="480" cy="410" r="2"/>
+        <circle cx="90" cy="390" r="2"/>
+        <circle cx="300" cy="50" r="2"/>
+        <circle cx="370" cy="450" r="2"/>
+
+    </g>
+
+
+    <!-- Orbit paths -->
+
+    <g fill="none"
+       stroke="#9d83ff"
+       stroke-opacity="0.45"
+       stroke-width="1.5">
+
+        <ellipse cx="300"
+                 cy="260"
+                 rx="100"
+                 ry="75"/>
+
+        <ellipse cx="300"
+                 cy="260"
+                 rx="165"
+                 ry="125"/>
+
+        <ellipse cx="300"
+                 cy="260"
+                 rx="230"
+                 ry="175"/>
+
+    </g>
+
+
+    <!-- Sun -->
+
+    <circle cx="300"
+            cy="260"
+            r="48"
+            fill="url(#sun)"/>
+
+
+    <!-- Mercury -->
+
+    <circle cx="397"
+            cy="260"
+            r="9"
+            fill="#a7a09b"/>
+
+
+    <!-- Venus -->
+
+    <circle cx="300"
+            cy="185"
+            r="15"
+            fill="#e8b477"/>
+
+
+    <!-- Earth -->
+
+    <circle cx="135"
+            cy="260"
+            r="19"
+            fill="url(#earth)"/>
+
+    <path d="M125 250
+             Q140 238 147 254
+             Q150 264 138 272
+             L127 266 Z"
+          fill="#69bd83"/>
+
+
+    <!-- Mars -->
+
+    <circle cx="300"
+            cy="85"
+            r="13"
+            fill="url(#mars)"/>
+
+
+    <!-- Saturn -->
+
+    <circle cx="530"
+            cy="260"
+            r="24"
+            fill="#e5c18b"/>
+
+    <ellipse cx="530"
+             cy="260"
+             rx="42"
+             ry="12"
+             fill="none"
+             stroke="#e7c99c"
+             stroke-width="6"
+             transform="rotate(-20 530 260)"/>
+
+
+    <!-- Title -->
+
+    <text x="300"
+          y="475"
+          fill="#ffffff"
+          font-family="Arial"
+          font-size="18"
+          text-anchor="middle"
+          letter-spacing="4">
+        OUR SOLAR SYSTEM
+    </text>
+
+</svg>

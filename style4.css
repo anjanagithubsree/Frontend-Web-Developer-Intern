@@ -1,0 +1,1131 @@
+/* =================================
+   1. ROOT VARIABLES
+================================= */
+
+:root {
+
+    --background: #090d20;
+
+    --surface: #111831;
+
+    --surface-light: #192442;
+
+    --primary: #9d83ff;
+
+    --secondary: #5de2e7;
+
+    --white: #ffffff;
+
+    --text: #e9edff;
+
+    --muted: #b9c2dc;
+
+    --border: #293557;
+
+}
+
+
+/* =================================
+   2. RESET AND GLOBAL STYLES
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 100px;
+
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+.container {
+
+    width: min(1120px, calc(100% - 48px));
+
+    margin: auto;
+
+}
+
+
+.section-padding {
+
+    padding: 90px 0;
+
+}
+
+
+/* =================================
+   3. ACCESSIBILITY
+================================= */
+
+.skip-link {
+
+    position: absolute;
+
+    top: -100px;
+
+    left: 15px;
+
+    z-index: 1000;
+
+    background: var(--secondary);
+
+    color: #090d20;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+.skip-link:focus {
+
+    top: 15px;
+
+}
+
+
+a:focus-visible {
+
+    outline: 3px solid #ffe27a;
+
+    outline-offset: 5px;
+
+    border-radius: 4px;
+
+}
+
+
+/* =================================
+   4. HEADER
+================================= */
+
+.header {
+
+    background: #0d142b;
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.header-content {
+
+    min-height: 82px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.logo img {
+
+    width: 42px;
+
+    height: 42px;
+
+}
+
+
+.logo-highlight {
+
+    color: var(--secondary);
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 28px;
+
+    list-style: none;
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--secondary);
+
+}
+
+
+/* =================================
+   5. HERO SECTION
+================================= */
+
+.hero {
+
+    background:
+
+        radial-gradient(
+            circle at 75% 45%,
+            #25235b,
+            transparent 35%
+        ),
+
+        var(--background);
+
+}
+
+
+.hero-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+
+}
+
+
+.eyebrow {
+
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: var(--primary);
+
+}
+
+
+.hero-description {
+
+    max-width: 480px;
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+
+}
+
+
+.button {
+
+    display: inline-block;
+
+    background: var(--primary);
+
+    color: #090d20;
+
+    padding: 14px 26px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: background 0.2s ease;
+
+}
+
+
+.button:hover {
+
+    background: var(--secondary);
+
+}
+
+
+.button span {
+
+    margin-left: 8px;
+
+}
+
+
+.hero-note {
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.hero-note span {
+
+    color: var(--secondary);
+
+    margin-right: 8px;
+
+}
+
+
+.hero-art img {
+
+    width: 100%;
+
+    max-width: 570px;
+
+    margin: auto;
+
+}
+
+
+/* =================================
+   6. STATISTICS
+================================= */
+
+.statistics {
+
+    background: var(--surface);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 28px 0;
+
+}
+
+
+.statistics-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    text-align: center;
+
+}
+
+
+.stat-item h2 {
+
+    color: var(--secondary);
+
+    font-size: 35px;
+
+}
+
+
+.stat-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =================================
+   7. SECTION HEADINGS
+================================= */
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 50px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: clamp(30px, 4vw, 43px);
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading > p:last-child {
+
+    color: var(--muted);
+
+}
+
+
+/* =================================
+   8. PLANET CARDS
+================================= */
+
+.planets {
+
+    background: var(--background);
+
+}
+
+
+.planet-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.planet-card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: transform 0.2s ease,
+                border-color 0.2s ease;
+
+}
+
+
+.planet-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--primary);
+
+}
+
+
+.planet-visual {
+
+    min-height: 190px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--surface-light);
+
+}
+
+
+.planet-visual span {
+
+    display: block;
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    box-shadow:
+        inset -15px -10px 20px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(157, 131, 255, 0.2);
+
+}
+
+
+.mercury span {
+
+    background: linear-gradient(
+        135deg,
+        #b6aca4,
+        #615c65
+    );
+
+    width: 75px;
+
+    height: 75px;
+
+}
+
+
+.venus span {
+
+    background: linear-gradient(
+        135deg,
+        #f4c47a,
+        #ad663d
+    );
+
+}
+
+
+.earth span {
+
+    background: linear-gradient(
+        135deg,
+        #6ce1ed,
+        #2367bd,
+        #286f4d
+    );
+
+}
+
+
+.mars span {
+
+    background: linear-gradient(
+        135deg,
+        #fa9b74,
+        #9b382f
+    );
+
+}
+
+
+.planet-info {
+
+    padding: 23px;
+
+}
+
+
+.planet-number {
+
+    color: var(--secondary);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.planet-info h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.planet-info p:last-child {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =================================
+   9. MISSIONS SECTION
+================================= */
+
+.missions {
+
+    background: #10182f;
+
+}
+
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.mission-visual {
+
+    min-height: 400px;
+
+    background:
+        radial-gradient(
+            circle,
+            #27285e,
+            #10182f 70%
+        );
+
+    border-radius: 25px;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+}
+
+
+.orbit {
+
+    position: absolute;
+
+    border: 1px solid rgba(157, 131, 255, 0.5);
+
+    border-radius: 50%;
+
+}
+
+
+.orbit-one {
+
+    width: 230px;
+
+    height: 230px;
+
+}
+
+
+.orbit-two {
+
+    width: 320px;
+
+    height: 320px;
+
+}
+
+
+.rocket {
+
+    font-size: 85px;
+
+    z-index: 2;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.mission-star {
+
+    position: absolute;
+
+    color: var(--secondary);
+
+    font-size: 30px;
+
+}
+
+
+.star-one {
+
+    top: 50px;
+
+    left: 70px;
+
+}
+
+
+.star-two {
+
+    bottom: 70px;
+
+    right: 65px;
+
+}
+
+
+.star-three {
+
+    top: 90px;
+
+    right: 90px;
+
+}
+
+
+.mission-content h2 {
+
+    font-size: clamp(30px, 4vw, 43px);
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+}
+
+
+.mission-content > p:not(.eyebrow) {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+
+}
+
+
+.mission-list div {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.mission-list span {
+
+    color: var(--secondary);
+
+    font-weight: bold;
+
+}
+
+
+.mission-list p {
+
+    font-weight: bold;
+
+}
+
+
+/* =================================
+   10. SPACE FACTS
+================================= */
+
+.facts {
+
+    background: var(--background);
+
+}
+
+
+.facts-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.fact-card {
+
+    background: var(--surface);
+
+    padding: 32px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+}
+
+
+.fact-card > span {
+
+    font-size: 38px;
+
+}
+
+
+.fact-card h3 {
+
+    color: var(--secondary);
+
+    margin: 15px 0 10px;
+
+}
+
+
+.fact-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+/* =================================
+   11. ABOUT SECTION
+================================= */
+
+.about {
+
+    background:
+        linear-gradient(
+            120deg,
+            #24204d,
+            #111831
+        );
+
+    text-align: center;
+
+}
+
+
+.about-content {
+
+    max-width: 750px;
+
+}
+
+
+.about h2 {
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about-content > p:not(.eyebrow) {
+
+    color: var(--muted);
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =================================
+   12. FOOTER
+================================= */
+
+.footer {
+
+    background: #060a16;
+
+    padding: 35px 0;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.footer-content p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+}
+
+
+.footer-logo {
+
+    color: var(--secondary);
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+}
+
+
+/* =================================
+   13. TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 900px) {
+
+    .hero-grid,
+    .mission-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero-content {
+
+        text-align: center;
+
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .planet-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .mission-content {
+
+        text-align: center;
+
+    }
+
+
+    .mission-list {
+
+        display: inline-block;
+
+        text-align: left;
+
+    }
+
+}
+
+
+/* =================================
+   14. MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: calc(100% - 32px);
+
+    }
+
+
+    .section-padding {
+
+        padding: 65px 0;
+
+    }
+
+
+    .header-content {
+
+        flex-direction: column;
+
+        padding: 15px 0;
+
+        gap: 15px;
+
+    }
+
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 17px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 12px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .statistics-grid {
+
+        gap: 10px;
+
+    }
+
+
+    .stat-item h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .planet-grid,
+    .facts-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .mission-visual {
+
+        min-height: 300px;
+
+    }
+
+
+    .orbit-two {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .orbit-one {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+}
+
+
+/* =================================
+   15. REDUCED MOTION ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
